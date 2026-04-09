@@ -11,47 +11,13 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header id="site-header">
-      <div class="nav-wrapper">
-        <a class="nav-brand" href="#hero" aria-label="Retour à l'accueil Tariqui">
-          <img src="assets/logo tariqi 1.png" alt="Tariqui — Accueil" />
-        </a>
+    <div data-component="components/header.html"></div>
 
-        <nav class="nav-links" aria-label="Navigation principale">
-          <a href="#trips">Covoiturage</a>
-          <a href="#how-it-works">Comment ça marche</a>
-          <a href="#about">À propos</a>
-        </nav>
-
-        <div class="nav-actions">
-          <button class="btn-outline" type="button">Se connecter</button>
-          <button class="btn-filled" type="button">Proposer un trajet</button>
-        </div>
-
-        <button
-          class="hamburger"
-          type="button"
-          aria-label="Ouvrir le menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-
-      <div id="mobile-menu" class="mobile-menu" aria-label="Menu mobile">
-        <a href="#trips">Covoiturage</a>
-        <a href="#how-it-works">Comment ça marche</a>
-        <a href="#about">À propos</a>
-        <button class="btn-outline" type="button">Se connecter</button>
-        <button class="btn-filled" type="button">Proposer un trajet</button>
-      </div>
-    </header>
+    <main id="page-main">
 
     <!-- HERO -->
     <section id="hero">
+      <div class="hero-top-veil" aria-hidden="true"></div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
         
@@ -121,7 +87,7 @@
       </button>
     </div>
 
-    <section id="destinations">
+  <section id="destinations" class="reveal">
       <div class="destinations-header">
         <div class="destinations-title-group">
           <p class="section-kicker">Où voulez-vous aller ?</p>
@@ -139,7 +105,7 @@
       </div>
 
       <div class="destinations-track-wrapper">
-        <div class="destinations-track" id="dest-track">
+        <div class="destinations-track reveal-group" id="dest-track">
           <article class="dest-card" data-city="Tunis">
             <img src="assets/tunis.jpeg" alt="Tunis, capitale de la Tunisie" />
             <div class="dest-card-body">
@@ -207,13 +173,13 @@
       </div>
     </section>
 
-    <section id="ratings">
-      <div class="ratings-header">
+    <section id="ratings" class="reveal">
+      <div class="ratings-header reveal">
         <p class="section-kicker">Ils nous font confiance</p>
         <h2>Ce qu'ils disent de Tariqi</h2>
       </div>
 
-      <div class="ratings-track-outer">
+  <div class="ratings-track-outer reveal">
         <div class="ratings-track">
           <!-- SET 1 -->
           <article class="rating-card">
@@ -418,15 +384,15 @@
       </div>
     </section>
 
-    <section id="how-it-works">
+  <section id="how-it-works">
       <div class="hiw-inner">
         <div class="hiw-header">
           <p class="section-kicker">Simple par définition</p>
           <h2>Comment ça marche ?</h2>
         </div>
 
-        <div class="hiw-steps">
-          <article class="hiw-step">
+        <div class="hiw-steps reveal-group">
+          <article class="hiw-step reveal">
             <div class="hiw-step-number" aria-hidden="true">01</div>
             <div class="hiw-step-icon">
               <span class="material-symbols-outlined">travel_explore</span>
@@ -440,12 +406,12 @@
             </div>
           </article>
 
-          <div class="hiw-connector" aria-hidden="true">
+          <div class="hiw-connector reveal" aria-hidden="true">
             <div class="hiw-connector-line"></div>
             <span class="material-symbols-outlined hiw-connector-arrow">arrow_forward</span>
           </div>
 
-          <article class="hiw-step">
+          <article class="hiw-step reveal">
             <div class="hiw-step-number" aria-hidden="true">02</div>
             <div class="hiw-step-icon">
               <span class="material-symbols-outlined">check_circle</span>
@@ -459,12 +425,12 @@
             </div>
           </article>
 
-          <div class="hiw-connector" aria-hidden="true">
+          <div class="hiw-connector reveal" aria-hidden="true">
             <div class="hiw-connector-line"></div>
             <span class="material-symbols-outlined hiw-connector-arrow">arrow_forward</span>
           </div>
 
-          <article class="hiw-step">
+          <article class="hiw-step reveal">
             <div class="hiw-step-number" aria-hidden="true">03</div>
             <div class="hiw-step-icon">
               <span class="material-symbols-outlined">directions_car</span>
@@ -482,8 +448,8 @@
     </section>
 
     <section id="conducteur">
-      <div class="conducteur-inner">
-        <div class="conducteur-content">
+      <div class="conducteur-inner reveal-group">
+        <div class="conducteur-content reveal reveal-left">
           <p class="section-kicker">Vous conduisez déjà ?</p>
           <h2>Autant ne pas conduire seul.</h2>
           <p class="conducteur-copy">
@@ -507,7 +473,7 @@
           </ul>
         </div>
 
-        <div class="conducteur-media">
+  <div class="conducteur-media reveal reveal-right">
           <div class="conducteur-image-wrap">
             <img
               src="assets/image_voiture.png"
@@ -519,6 +485,41 @@
       </div>
     </section>
 
+  <section id="about" class="reveal">
+      <div class="about-inner">
+        <div class="about-rule" aria-hidden="true"></div>
+        <p class="section-kicker">Qui sommes-nous ?</p>
+        <h2>À propos de Tariqi</h2>
+        <p class="about-text">
+          Tariqi est une plateforme de covoiturage en Tunisie qui vise à simplifier les
+          déplacements du quotidien. Nous mettons en relation conducteurs et passagers partageant
+          les mêmes trajets, dans un cadre sécurisé et basé sur la confiance. Notre objectif est
+          de proposer une solution de mobilité pratique, économique et responsable, tout en créant
+          une communauté où le partage et la fiabilité sont essentiels.
+        </p>
+
+        <div class="about-stats" aria-label="Indicateurs Tariqi">
+          <div class="about-stat">
+            <p class="about-stat-value"><span class="stat-number" data-target="24">24</span></p>
+            <p class="about-stat-label">Destinations</p>
+          </div>
+          <div class="about-stat">
+            <p class="about-stat-value"><span class="stat-number" data-target="100">100</span><sup>%</sup></p>
+            <p class="about-stat-label">Trajets vérifiés</p>
+          </div>
+          <div class="about-stat">
+            <p class="about-stat-value">24<sup>h</sup></p>
+            <p class="about-stat-label">Support disponible</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    </main>
+
+    <div data-component="components/footer.html"></div>
+
+    <script src="js/components.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

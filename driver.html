@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devenir conducteur | Tariqi</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="driver-page">
+    <div data-component="components/header.html"></div>
+
+    <main>
+      <section id="driver-hero">
+        <div class="driver-hero-overlay"></div>
+        <div class="driver-hero-content">
+          <p class="section-kicker">Conducteurs Tariqi</p>
+          <h1>Gagnez en conduisant vos trajets habituels.</h1>
+          <p>
+            Transformez vos places libres en revenus complémentaires tout en aidant d'autres
+            voyageurs à se déplacer sereinement en Tunisie.
+          </p>
+        </div>
+      </section>
+
+      <section id="driver-benefits">
+        <div class="driver-benefits-inner">
+          <article class="driver-benefit-card">
+            <span class="material-symbols-outlined">savings</span>
+            <h2>Couvrez vos frais</h2>
+            <p>Partagez le coût du carburant et des péages à chaque trajet.</p>
+          </article>
+
+          <article class="driver-benefit-card">
+            <span class="material-symbols-outlined">verified_user</span>
+            <h2>Choisissez vos passagers</h2>
+            <p>Consultez les profils et confirmez uniquement les demandes qui vous conviennent.</p>
+          </article>
+
+          <article class="driver-benefit-card">
+            <span class="material-symbols-outlined">diversity_3</span>
+            <h2>Voyagez en bonne compagnie</h2>
+            <p>Créez des trajets conviviaux avec une communauté respectueuse et fiable.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="driver-form-section">
+        <div class="driver-form-wrapper">
+          <div class="driver-form-heading">
+            <p class="section-kicker">Inscription rapide</p>
+            <h2>Proposez votre premier trajet</h2>
+            <p>Remplissez ce formulaire et nous vous recontacterons pour finaliser votre profil.</p>
+          </div>
+
+          <form class="driver-form" action="/api/drivers/register" method="post">
+            <div class="driver-form-grid">
+              <label>
+                Nom complet
+                <input type="text" name="name" placeholder="Ex: Ahmed Ben Salah" required />
+              </label>
+
+              <label>
+                Numéro de téléphone
+                <input type="tel" name="phone" placeholder="Ex: +216 99 000 000" required />
+              </label>
+
+              <label>
+                Ville de départ
+                <select name="city" required>
+                  <option value="">Sélectionner une ville</option>
+                  <option value="Tunis">Tunis</option>
+                  <option value="Sousse">Sousse</option>
+                  <option value="Sfax">Sfax</option>
+                  <option value="Bizerte">Bizerte</option>
+                  <option value="Gabès">Gabès</option>
+                  <option value="Hammamet">Hammamet</option>
+                  <option value="Djerba">Djerba</option>
+                </select>
+              </label>
+
+              <label>
+                Modèle de voiture
+                <input type="text" name="carModel" placeholder="Ex: Kia Picanto 2021" required />
+              </label>
+            </div>
+
+            <label>
+              Message (optionnel)
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Précisez vos horaires ou trajets fréquents..."
+              ></textarea>
+            </label>
+
+            <button type="submit">Je veux conduire</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <div data-component="components/footer.html"></div>
+
+    <script src="js/components.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
